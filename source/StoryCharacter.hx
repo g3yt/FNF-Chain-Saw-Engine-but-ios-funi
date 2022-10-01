@@ -35,6 +35,9 @@ class StoryCharacter extends FlxSprite
 			if (visible == false)
 				visible = true;
 
+			scale.set(1, 1);
+			updateHitbox(); // is this acually needed?
+
 			final daCharacter:SwagStoryCharacter = StoryCharacterParse.loadJson(char + '/data');
 
 			if (Assets.exists(Paths.xml('images/menucharacters/' + char + '/spritesheet')))
@@ -75,13 +78,13 @@ class StoryCharacter extends FlxSprite
 			}
 			else
 				animation.addByPrefix('idle', 'idle', 24, false);
-	
+
 			if (daCharacter.scale != 1)
 			{
 				scale.set(daCharacter.scale, daCharacter.scale);
 				updateHitbox(); // is this acually needed?
 			}
-	
+
 			if (daCharacter.antialiasing == true)
 				antialiasing = PreferencesData.antialiasing;
 			else

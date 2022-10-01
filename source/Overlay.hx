@@ -57,7 +57,7 @@ class Overlay extends TextField
 
 	public static function getInterval(size:Float):String
 	{
-		var data = 0;
+		var data:Int = 0;
 
 		while (size > 1024 && data < intervalArray.length - 1)
 		{

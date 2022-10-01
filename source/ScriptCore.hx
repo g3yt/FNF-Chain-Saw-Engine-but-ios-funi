@@ -1,11 +1,5 @@
 package;
 
-#if android
-import android.Hardware;
-import android.Permissions;
-import android.os.Build;
-import android.os.Environment;
-#end
 import flixel.FlxBasic;
 import flixel.FlxCamera;
 import flixel.FlxG;
@@ -34,16 +28,24 @@ import openfl.Lib;
 import openfl.display.BitmapData;
 import openfl.filters.BitmapFilter;
 import openfl.filters.ShaderFilter;
-import openfl.text.Font;
 import openfl.media.Sound;
+import openfl.text.Font;
 import openfl.utils.Assets;
+import parsers.Song;
 import states.PlayState;
+
+using StringTools;
+
+#if android
+import android.Hardware;
+import android.Permissions;
+import android.os.Build;
+import android.os.Environment;
+#end
 #if sys
 import sys.FileSystem;
 import sys.io.File;
 #end
-
-using StringTools;
 
 /**
  * Class based from Wednesdays-Infidelty Mod.
@@ -68,7 +70,7 @@ class ScriptCore extends FlxBasic
 
 		setVariable('Function_Stop', Function_Stop);
 		setVariable('Function_Continue', Function_Continue);
-	
+
 		/**
 			extension-androidtools
 		**/
@@ -83,6 +85,7 @@ class ScriptCore extends FlxBasic
 			Haxe
 		**/
 		setVariable('Math', Math);
+
 		setVariable('Reflect', Reflect);
 		#if sys
 		setVariable('Sys', Sys);
@@ -101,6 +104,7 @@ class ScriptCore extends FlxBasic
 			Flixel
 		**/
 		setVariable('FlxG', FlxG);
+
 		setVariable('FlxSprite', FlxSprite);
 		setVariable('FlxCamera', FlxCamera);
 		setVariable('FlxTimer', FlxTimer);
@@ -125,6 +129,7 @@ class ScriptCore extends FlxBasic
 			Openfl
 		**/
 		setVariable('Lib', Lib);
+
 		setVariable('Assets', Assets);
 		setVariable('BitmapData', BitmapData);
 		setVariable('BitmapFilter', BitmapFilter);
@@ -136,17 +141,23 @@ class ScriptCore extends FlxBasic
 			Source
 		**/
 		setVariable('Alphabet', Alphabet);
+
 		#if FUTURE_DISCORD_RCP
 		setVariable('DiscordClient', DiscordClient);
 		#end
 		setVariable('Note', Note);
+		setVariable('Song', Song);
 		setVariable('Main', Main);
 		setVariable('Paths', Paths);
 		setVariable('CoolUtil', CoolUtil);
 		setVariable('Conductor', Conductor);
 		setVariable('PreferencesData', PreferencesData);
-		setVariable('PlayState', PlayState);
 		setVariable('SUtil', SUtil);
+
+		/**
+			Game States
+		**/
+		setVariable('PlayState', PlayState);
 
 		try
 		{

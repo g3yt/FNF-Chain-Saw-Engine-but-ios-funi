@@ -139,7 +139,7 @@ class OptionsState extends MusicBeatState
 
 		if (curSelected < 0)
 			curSelected = options.length - 1;
-		else if (curSelected >= options.length)
+		if (curSelected >= options.length)
 			curSelected = 0;
 
 		var bullShit:Int = 0;

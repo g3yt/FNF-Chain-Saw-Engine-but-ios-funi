@@ -7,7 +7,6 @@ import flixel.input.actions.FlxActionInput;
 import flixel.util.FlxDestroyUtil;
 #end
 import Conductor.BPMChangeEvent;
-import flixel.FlxG;
 import flixel.FlxSubState;
 
 class MusicBeatSubstate extends FlxSubState

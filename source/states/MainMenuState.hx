@@ -35,8 +35,13 @@ class MainMenuState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		if (!FlxG.sound.music.playing)
+		if (!FlxG.sound.music.playing #if FUTURE_POLYMOD || ModsMenuState.mustResetMusic #end)
+		{
 			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			#if FUTURE_POLYMOD
+			ModsMenuState.mustResetMusic = false;
+			#end
+		}
 
 		persistentUpdate = persistentDraw = true;
 
@@ -220,7 +225,7 @@ class MainMenuState extends MusicBeatState
 
 		if (curSelected >= menuItems.length)
 			curSelected = 0;
-		else if (curSelected < 0)
+		if (curSelected < 0)
 			curSelected = menuItems.length - 1;
 
 		menuItems.forEach(function(spr:FlxSprite)

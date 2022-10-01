@@ -11,9 +11,10 @@ import Conductor.BPMChangeEvent;
 import flixel.FlxG;
 import flixel.FlxCamera;
 import flixel.FlxState;
+import flixel.addons.ui.FlxUIState;
 import flixel.addons.transition.FlxTransitionableState;
 
-class MusicBeatState extends FlxState
+class MusicBeatState extends FlxUIState
 {
 	private var curStep:Int = 0;
 	private var curBeat:Int = 0;

@@ -13,6 +13,7 @@ import openfl.display.BitmapData;
 
 class ModsMenuState extends MusicBeatState
 {
+	public static var mustResetMusic:Bool = false;
 	private var daMods:FlxTypedGroup<Alphabet>;
 	private var iconArray:Array<ModIcon> = [];
 	private var curSelected:Int = 0;
@@ -77,10 +78,7 @@ class ModsMenuState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			ModCore.reload();
-			FlxG.sound.music.fadeOut(0.7, 0, function(tween:FlxTween)
-			{
-				FlxG.sound.music.stop();
-			});
+			ModsMenuState.mustResetMusic = true;
 			MusicBeatState.switchState(new MainMenuState());
 		}
 		else if (controls.ACCEPT)
@@ -110,7 +108,7 @@ class ModsMenuState extends MusicBeatState
 
 		if (curSelected < 0)
 			curSelected = ModCore.trackedMods.length - 1;
-		else if (curSelected >= ModCore.trackedMods.length)
+		if (curSelected >= ModCore.trackedMods.length)
 			curSelected = 0;
 
 		for (i in 0...iconArray.length)

@@ -173,7 +173,7 @@ class FreeplayState extends MusicBeatState
 
 		if (curSelected < 0)
 			curSelected = songs.length - 1;
-		else if (curSelected >= songs.length)
+		if (curSelected >= songs.length)
 			curSelected = 0;
 
 		intendedScore = HighScore.getScore(songs[curSelected].songName, curDifficulty);

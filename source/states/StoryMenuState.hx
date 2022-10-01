@@ -256,7 +256,7 @@ class StoryMenuState extends MusicBeatState
 
 		if (curDifficulty < 0)
 			curDifficulty = CoolUtil.difficultyArray.length - 1;
-		else if (curDifficulty >= CoolUtil.difficultyArray.length)
+		if (curDifficulty >= CoolUtil.difficultyArray.length)
 			curDifficulty = 0;
 
 		switch (curDifficulty)
@@ -288,7 +288,7 @@ class StoryMenuState extends MusicBeatState
 
 		if (curWeek < 0)
 			curWeek = loadedWeeks.length - 1;
-		else if (curWeek >= loadedWeeks.length)
+		if (curWeek >= loadedWeeks.length)
 			curWeek = 0;
 
 		var bullShit:Int = 0;
