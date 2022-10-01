@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Menu_Dad.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="0" y="0" width="422" height="770" frameX="-5" frameY="0" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0001" x="0" y="0" width="422" height="770" frameX="-5" frameY="0" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0002" x="422" y="0" width="430" height="762" frameX="0" frameY="-7" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0003" x="422" y="0" width="430" height="762" frameX="0" frameY="-7" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0004" x="852" y="0" width="426" height="761" frameX="-1" frameY="-9" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0005" x="852" y="0" width="426" height="761" frameX="-1" frameY="-9" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0006" x="1278" y="0" width="425" height="762" frameX="-2" frameY="-8" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0007" x="1278" y="0" width="425" height="762" frameX="-2" frameY="-8" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0008" x="0" y="770" width="420" height="770" frameX="-5" frameY="0" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0009" x="0" y="770" width="420" height="770" frameX="-5" frameY="0" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0010" x="420" y="770" width="422" height="770" frameX="-5" frameY="0" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0011" x="420" y="770" width="422" height="770" frameX="-5" frameY="0" frameWidth="430" frameHeight="770"/>
+	<SubTexture name="idle0012" x="0" y="0" width="422" height="770" frameX="-5" frameY="0" frameWidth="430" frameHeight="770"/>
+</TextureAtlas>
