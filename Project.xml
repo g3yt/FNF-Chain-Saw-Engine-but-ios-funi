@@ -94,7 +94,7 @@
         <haxeflag name="--macro" value="include('Sys')" /> <!-- thats Sys class, not sys package -->
 	<haxeflag name="--macro" value="include('StringBuf')" />
 	<haxeflag name="--macro" value="include('haxe')" />
-        <haxeflag name="--macro" value="include('cpp')" />
+        <haxeflag name="--macro" value="include('Reflect')" />
         <haxeflag name="--macro" value="include('spinehaxe')" />
 
 	<!-- _________________________________ Android Permissions _______________________________ -->
