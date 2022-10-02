@@ -96,8 +96,6 @@
         <haxeflag name="--macro" value="include('Reflect')" />
         <haxeflag name="--macro" value="include('spinehaxe')" />
         <haxeflag name="--macro" value="include('android')" if="android" />
-        <haxeflag name="--macro" value="include('openfl')" />
-        <haxeflag name="--macro" value="include('lime')" />
 
 	<!-- _________________________________ Android Permissions _______________________________ -->
 
