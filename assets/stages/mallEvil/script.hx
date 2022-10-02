@@ -1,3 +1,7 @@
+import('Paths');
+import('flixel.FlxSprite');
+import('states.PlayState');
+
 function create()
 {
 	PlayState.isPixelAssets = false;

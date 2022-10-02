@@ -1,3 +1,10 @@
+import('Paths');
+import('flixel.FlxG');
+import('flixel.FlxSprite');
+import('flixel.group.FlxSpriteGroup');
+import('flixel.graphics.frames.FlxAtlasFrames');
+import('states.PlayState');
+
 var limo:FlxSprite;
 var grpLimoDancers:FlxSpriteGroup;
 var fastCar:FlxSprite;

@@ -1,3 +1,9 @@
+import('Paths');
+import('flixel.FlxSprite');
+import('flixel.graphics.frames.FlxAtlasFrames');
+import('flixel.addons.effects.FlxTrail');
+import('states.PlayState');
+
 function create()
 {
 	PlayState.isPixelAssets = true;

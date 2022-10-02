@@ -3,8 +3,6 @@ package;
 import flixel.FlxG;
 import openfl.Lib;
 #if FUTURE_POLYMOD
-import polymod.Polymod.ModMetadata;
-import polymod.Polymod.PolymodError;
 import polymod.Polymod;
 import polymod.backends.PolymodAssets.PolymodAssetType;
 import polymod.format.ParseRules;

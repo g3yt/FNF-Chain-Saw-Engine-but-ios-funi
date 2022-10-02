@@ -1,3 +1,9 @@
+import('Paths');
+import('flixel.FlxG');
+import('flixel.FlxSprite');
+import('flixel.graphics.frames.FlxAtlasFrames');
+import('states.PlayState');
+
 var halloweenBG:FlxSprite;
 var lightningStrikeBeat:Int = 0;
 var lightningOffset:Int = 8;

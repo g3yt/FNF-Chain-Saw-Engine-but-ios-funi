@@ -54,7 +54,6 @@ class PlayState extends MusicBeatState
 	private var defaultOpponentStrumX:Array<Float> = [];
 	private var defaultOpponentStrumY:Array<Float> = [];
 	private var unspawnNotes:Array<Note> = [];
-	private var prevCamFollow:FlxObject;
 	private var healthBarBG:FlxSprite;
 	private var healthBar:FlxBar;
 	private var vocals:FlxSound;
@@ -174,6 +173,11 @@ class PlayState extends MusicBeatState
 					SONG.gfVersion = 'gf-christmas';
 				case 'school' | 'schoolEvil':
 					SONG.gfVersion = 'gf-pixel';
+				case 'tank':
+					if (SONG.song.toLowerCase() != 'stress')
+						SONG.gfVersion = 'gf-tankmen';
+					else
+						SONG.gfVersion = 'pico-speaker';
 				default:
 					SONG.gfVersion = 'gf';
 			}
@@ -220,13 +224,6 @@ class PlayState extends MusicBeatState
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollow.setPosition(dad.getGraphicMidpoint().x + dad.camPos[0], dad.getGraphicMidpoint().y + dad.camPos[1]);
-
-		if (prevCamFollow != null)
-		{
-			camFollow = prevCamFollow;
-			prevCamFollow = null;
-		}
-
 		add(camFollow);
 
 		FlxG.camera.follow(camFollow, LOCKON, 0.04);
@@ -790,7 +787,10 @@ class PlayState extends MusicBeatState
 
 		callScripts('update', [elapsed]);
 
-		scoreTxt.text = 'Score:' + score + divider + 'Combo Breaks:' + comboBreaks;
+		if (autoplayMode)
+			scoreTxt.text = 'Auto-Play';
+		else
+			scoreTxt.text = 'Score:' + score + divider + 'Combo Breaks:' + comboBreaks;
 		scoreTxt.screenCenter(X);
 
 		if (controls.PAUSE #if android || FlxG.android.justReleased.BACK #end && startedCountdown && canPause)
@@ -1068,11 +1068,8 @@ class PlayState extends MusicBeatState
 
 	private function endSong():Void
 	{
-		seenCutscene = false;
-		autoplayMode = false;
+		seenCutscene = autoplayMode = canPause = false;
 		deathCounter = 0;
-		seenCutscene = false;
-		canPause = false;
 		FlxG.sound.music.volume = vocals.volume = 0;
 
 		#if mobile
@@ -1107,8 +1104,6 @@ class PlayState extends MusicBeatState
 				else
 				{
 					FlxTransitionableState.skipNextTransIn = FlxTransitionableState.skipNextTransOut = true;
-					prevCamFollow = camFollow;
-
 					PlayState.SONG = Song.loadJson(HighScore.formatSong(PlayState.storyPlaylist[0].toLowerCase(), storyDifficulty),
 						PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();

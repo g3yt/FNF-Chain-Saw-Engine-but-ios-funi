@@ -58,9 +58,6 @@
 
 	<haxedev set="webgl" if="html5" />
 
-	<!--No DCE is performed-->
-	<haxeflag name="-dce no" />
-
 	<!--You will get fine error reporting at parsing time-->
 	<haxedef name="hscriptPos" />
 
@@ -80,7 +77,21 @@
 	<haxedef name="HXCPP_STACK_LINE" if="cpp" unless="debug" />
 
 	<!--Add null-pointer checks, even in release mode-->
-	<haxedef name="HXCPP_CHECK_POINTER" if="cpp" unless="debug" /> 
+	<haxedef name="HXCPP_CHECK_POINTER" if="cpp" unless="debug" />
+
+	<!-- ______________________________ Haxe Flags _____________________________ -->
+
+	<!--No DCE is performed-->
+	<haxeflag name="-dce no" />
+
+	<!--Hscript Power go brrr-->
+	<haxeflag name="--macro" value="include('flixel')" />
+	<haxeflag name="--macro" value="include('sys')" />
+	<haxeflag name="--macro" value="include('DateTools')" />
+	<haxeflag name="--macro" value="include('EReg')" />
+	<haxeflag name="--macro" value="include('Lambda')" />
+	<haxeflag name="--macro" value="include('StringBuf')" />
+	<haxeflag name="--macro" value="include('haxe.crypto')" />
 
 	<!-- _________________________________ Android Permissions _______________________________ -->
 

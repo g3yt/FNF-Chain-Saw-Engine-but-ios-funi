@@ -51,9 +51,7 @@ class AnimationDebug extends FlxState
 			dad.screenCenter();
 			dad.debugMode = true;
 			add(dad);
-
 			char = dad;
-			dad.flipX = false;
 		}
 		else
 		{
@@ -61,9 +59,7 @@ class AnimationDebug extends FlxState
 			bf.screenCenter();
 			bf.debugMode = true;
 			add(bf);
-
 			char = bf;
-			bf.flipX = false;
 		}
 
 		dumbTexts = new FlxTypedGroup<FlxText>();

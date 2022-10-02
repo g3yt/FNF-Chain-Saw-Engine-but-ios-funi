@@ -1,3 +1,10 @@
+import('Paths');
+import('flixel.FlxG');
+import('flixel.FlxSprite');
+import('flixel.tweens.FlxEase');
+import('flixel.tweens.FlxTween');
+import('states.PlayState');
+
 var allowCountdown:Bool = false;
 
 function startCountdown()

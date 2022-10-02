@@ -1,3 +1,8 @@
+import('Paths');
+import('flixel.FlxSprite');
+import('flixel.graphics.frames.FlxAtlasFrames');
+import('states.PlayState');
+
 var upperBoppers:FlxSprite;
 var bottomBoppers:FlxSprite;
 var santa:FlxSprite;

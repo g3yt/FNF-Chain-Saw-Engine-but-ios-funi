@@ -1,3 +1,10 @@
+import('Paths');
+import('flixel.FlxG');
+import('flixel.FlxSprite');
+import('flixel.group.FlxSpriteGroup');
+import('flixel.addons.display.FlxRuntimeShader');
+import('states.PlayState');
+
 var lightFadeShader:FlxRuntimeShader;
 var phillyCityLights:FlxSpriteGroup;
 var phillyTrain:FlxSprite;

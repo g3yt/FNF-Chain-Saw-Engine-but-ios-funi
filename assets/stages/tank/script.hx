@@ -1,3 +1,9 @@
+import('Paths');
+import('flixel.FlxG');
+import('flixel.FlxSprite');
+import('flixel.graphics.frames.FlxAtlasFrames');
+import('states.PlayState');
+
 var tankWatchtower:FlxSprite;
 var tankGround:FlxSprite;
 var tankdude0:FlxSprite;
@@ -151,5 +157,5 @@ function beatHit(curBeat:Int)
 	tankdude2.animation.play('fg');
 	tankdude4.animation.play('fg');
 	tankdude5.animation.play('fg');
-	tankdude3.animation.play('fg');
+	// tankdude3.animation.play('fg');
 }

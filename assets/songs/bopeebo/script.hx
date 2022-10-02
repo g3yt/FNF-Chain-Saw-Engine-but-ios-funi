@@ -1,3 +1,5 @@
+import('states.PlayState');
+
 function beatHit(curBeat:Int)
 {
 	switch (curBeat)

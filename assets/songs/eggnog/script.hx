@@ -1,3 +1,8 @@
+import('Paths');
+import('flixel.FlxG');
+import('flixel.FlxSprite');
+import('states.PlayState');
+
 function endSong()
 {
 	if (PlayState.SONG.song.toLowerCase() == 'eggnog')

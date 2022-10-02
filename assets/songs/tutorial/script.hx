@@ -1,3 +1,10 @@
+import('Paths');
+import('Conductor');
+import('flixel.FlxG');
+import('flixel.tweens.FlxEase');
+import('flixel.tweens.FlxTween');
+import('states.PlayState');
+
 function camearaFollow(character:String)
 {
 	if (character == 'dad')
