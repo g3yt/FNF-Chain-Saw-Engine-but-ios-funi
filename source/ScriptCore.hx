@@ -33,11 +33,11 @@ class ScriptCore extends FlxBasic
 		setVariable("import", function(className:String)
 		{
 			final splitClassName:Array<String> = [for (e in className.split(".")) e.trim()];
-			final realClassNameString = splitClassName.join(".");
+			final realClassName:String = splitClassName.join(".");
 			final daClass:Class<Dynamic> = Type.resolveClass(realClassName);
 			final daEnum:Enum<Dynamic> = Type.resolveEnum(realClassName);
 
-			if (daClass == null && en == null)
+			if (daClass == null && daEnum == null)
 				Lib.application.window.alert('Class / Enum at $realClassName does not exist.', "Hscript Error!");
 			else
 			{
