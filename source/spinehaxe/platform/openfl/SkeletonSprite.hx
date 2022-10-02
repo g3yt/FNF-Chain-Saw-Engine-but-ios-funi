@@ -155,7 +155,7 @@ class SkeletonSprite extends Sprite {
 			if (slot.attachment == null || !(slot.attachment is RegionAttachment)) continue;
 			var regionAttachment:RegionAttachment = cast slot.attachment;
 			if (regionAttachment != null) {
-				var wrapper:Sprite = Dynamic<Dynamic>.wrapper;
+				var wrapper:Sprite = regionAttachment.wrapper;
 				var region:AtlasRegion = cast regionAttachment.rendererObject;
 				if (wrapper == null) {
 					var bitmapData:BitmapData = cast region.page.rendererObject;
