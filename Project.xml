@@ -94,6 +94,7 @@
 	<haxeflag name="--macro" value="include('Lambda')" />
 	<haxeflag name="--macro" value="include('StringBuf')" />
 	<haxeflag name="--macro" value="include('haxe')" />
+        <haxeflag name="--macro" value="include('cpp')" />
         <haxeflag name="--macro" value="include('hxp')" />
         <haxeflag name="--macro" value="include('spinehaxe')" />
 
