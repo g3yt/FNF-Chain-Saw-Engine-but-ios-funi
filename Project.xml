@@ -57,7 +57,7 @@
 
 	<!-- ______________________________ Haxe Defines _____________________________ -->
 
-	<haxedev set="webgl" if="html5" />
+	<haxedev set="webgl" if="web" />
 
 	<!--You will get fine error reporting at parsing time-->
 	<haxedef name="hscriptPos" />
