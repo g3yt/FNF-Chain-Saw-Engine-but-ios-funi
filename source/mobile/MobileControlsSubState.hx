@@ -135,16 +135,6 @@ class MobileControlsSubState extends FlxSubState
 
 	override function update(elapsed:Float)
 	{
-		if (FlxG.android.justPressed.BACK || FlxG.android.justReleased.BACK)
-		{
-			MobileControls.setMode(controlsItems[Math.floor(curSelected)]);
-
-			if (controlsItems[Math.floor(curSelected)] == 'Pad-Custom')
-				MobileControls.setCustomMode(virtualPad);
-
-			FlxTransitionableState.skipNextTransOut = true;
-			FlxG.resetState();
-		}
 
 		super.update(elapsed);
 
