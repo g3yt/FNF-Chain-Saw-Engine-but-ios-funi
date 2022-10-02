@@ -581,7 +581,7 @@ class SkeletonJson {
 		var deformMap:JsonNode = map.getNode("deform");
 		for (skinName in deformMap.fields()) {
 			var skin:Skin = skeletonData.findSkin(skinName);
-			slotMap = deformMap.getNode(skinName);
+			slotMap:JsonNode = deformMap.getNode(skinName);
 			for (slotName in slotMap.fields()) {
 				slotIndex = skeletonData.findSlotIndex(slotName);
 				var timelineMap:JsonNode = slotMap.getNode(slotName);
