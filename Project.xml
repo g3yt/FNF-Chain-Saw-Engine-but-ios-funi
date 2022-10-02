@@ -49,7 +49,7 @@
 	<haxelib name="flixel-addons" />
 	<haxelib name="flixel-ui" />
 	<haxelib name="hscript" />
-        <haxelib name="spinehaxe" />
+	<haxelib name="spinehaxe" />
 	<haxelib name="polymod" if="FUTURE_POLYMOD" />
 	<haxelib name="discord_rpc" if="FUTURE_DISCORD_RCP" />
 	<haxelib name="hxcpp-debug-server" if="debug" />
@@ -93,11 +93,11 @@
 	<haxeflag name="--macro" value="include('Lambda')" />
 	<haxeflag name="--macro" value="include('StringBuf')" />
 	<haxeflag name="--macro" value="include('haxe.crypto')" />
-        <haxeflag name="--macro" value="include('Reflect')" />
-        <haxeflag name="--macro" value="include('spinehaxe')" />
-        <haxeflag name="--macro" value="include('android')" if="android" />
-        <haxeflag name="--macro" value="include('openfl')" />
-        <haxeflag name="--macro" value="include('lime')" />
+	<haxeflag name="--macro" value="include('Reflect')" />
+	<haxeflag name="--macro" value="include('spinehaxe')" />
+	<haxeflag name="--macro" value="include('android')" if="android" />
+	<haxeflag name="--macro" value="include('openfl')" />
+	<haxeflag name="--macro" value="include('lime')" />
 
 	<!-- _________________________________ Android Permissions _______________________________ -->
 
