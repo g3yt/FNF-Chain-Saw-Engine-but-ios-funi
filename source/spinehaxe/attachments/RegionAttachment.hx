@@ -67,7 +67,7 @@ class RegionAttachment extends Attachment {
 	public var offset:Vector<Float>;
 	public var uvs:Array<Float>;
 
-        public static var wrapper:openfl.display.Sprite;
+        public var wrapper:openfl.display.Sprite;
 
 	public function new(name:String) {
 		super(name);
