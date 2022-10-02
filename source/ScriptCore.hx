@@ -123,7 +123,7 @@ class ScriptCore extends FlxBasic
 				return Reflect.callMethod(null, getVariable(funcName), args);
 			}
 			catch (e:Dynamic)
-				Lib.application.window.alert(e.message, "Hscript Error!");
+				Lib.application.window.alert(e, "Hscript Error!");
 		}
 
 		return null;
