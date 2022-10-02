@@ -2,6 +2,7 @@ import('Paths');
 import('flixel.FlxG');
 import('flixel.FlxSprite');
 import('flixel.group.FlxSpriteGroup');
+import('flixel.util.FlxTimer');
 import('flixel.graphics.frames.FlxAtlasFrames');
 import('states.PlayState');
 

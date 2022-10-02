@@ -29,9 +29,7 @@ function lightningStrikeShit(curBeat:Int)
 	lightningOffset = FlxG.random.int(8, 24);
 
 	PlayState.instance.boyfriend.playAnim('scared', true);
-	PlayState.instance.boyfriend.specialAnim = true;
 	PlayState.instance.gf.playAnim('scared', true);
-	PlayState.instance.gf.specialAnim = true;
 }
 
 function beatHit(curBeat:Int)

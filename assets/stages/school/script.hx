@@ -1,4 +1,5 @@
 import('Paths');
+import('CoolUtil');
 import('flixel.FlxSprite');
 import('flixel.graphics.frames.FlxAtlasFrames');
 import('states.PlayState');

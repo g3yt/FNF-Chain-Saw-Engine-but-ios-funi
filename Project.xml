@@ -86,7 +86,7 @@
 
 	<!--Hscript Power go brrr-->
 	<haxeflag name="--macro" value="include('flixel')" />
-	<haxeflag name="--macro" value="include('sys')" />
+	<haxeflag name="--macro" value="include('sys')" unless="web" />
 	<haxeflag name="--macro" value="include('DateTools')" />
 	<haxeflag name="--macro" value="include('EReg')" />
 	<haxeflag name="--macro" value="include('Lambda')" />
