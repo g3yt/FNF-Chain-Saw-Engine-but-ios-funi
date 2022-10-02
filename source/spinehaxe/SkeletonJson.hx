@@ -581,7 +581,8 @@ class SkeletonJson {
 		var deformMap:JsonNode = map.getNode("deform");
 		for (skinName in deformMap.fields()) {
 			var skin:Skin = skeletonData.findSkin(skinName);
-			for (slotName in deformMap.getNode(skinName).fields()) {
+                        slotMap = deformMap.getNode(skinName);
+			for (slotName in deformMap.getNode(skinName).fields()) { // (sirox) this is bad way to make it
 				slotIndex = skeletonData.findSlotIndex(slotName);
 				var timelineMap:JsonNode = slotMap.getNode(slotName);
 				for (timelineName in timelineMap.fields()) {
