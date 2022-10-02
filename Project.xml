@@ -88,16 +88,14 @@
 	<!--Hscript Power go brrr-->
 	<haxeflag name="--macro" value="include('flixel')" />
 	<haxeflag name="--macro" value="include('sys')" unless="web" />
+	<haxeflag name="--macro" value="include('haxe.crypto')" />
+	<haxeflag name="--macro" value="include('spinehaxe')" />
+	<haxeflag name="--macro" value="include('android')" if="android" />
 	<haxeflag name="--macro" value="include('DateTools')" />
+	<haxeflag name="--macro" value="include('Reflect')" />
 	<haxeflag name="--macro" value="include('EReg')" />
 	<haxeflag name="--macro" value="include('Lambda')" />
 	<haxeflag name="--macro" value="include('StringBuf')" />
-	<haxeflag name="--macro" value="include('haxe.crypto')" />
-	<haxeflag name="--macro" value="include('Reflect')" />
-	<haxeflag name="--macro" value="include('spinehaxe')" />
-	<haxeflag name="--macro" value="include('android')" if="android" />
-	<haxeflag name="--macro" value="include('openfl')" />
-	<haxeflag name="--macro" value="include('lime')" />
 
 	<!-- _________________________________ Android Permissions _______________________________ -->
 
