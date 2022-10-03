@@ -2,10 +2,7 @@ package;
 
 import parsers.Song;
 
-/**
- * ...
- * @author
- */
+
 typedef BPMChangeEvent =
 {
 	var stepTime:Int;
