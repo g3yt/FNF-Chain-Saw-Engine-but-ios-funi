@@ -79,6 +79,8 @@
 
 	<!--Add null-pointer checks, even in release mode-->
 	<haxedef name="HXCPP_CHECK_POINTER" if="cpp" unless="debug" />
+	
+	<haxedef name="no-deprecation-warnings" />
 
 	<!-- ______________________________ Haxe Flags _____________________________ -->
 
