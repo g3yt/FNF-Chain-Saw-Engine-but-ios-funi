@@ -1,4 +1,5 @@
 import('Paths');
+import('Conductor');
 import('flixel.FlxG');
 import('flixel.FlxSprite');
 import('flixel.group.FlxSpriteGroup');

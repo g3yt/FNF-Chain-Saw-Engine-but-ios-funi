@@ -29,6 +29,29 @@ class ScriptCore extends FlxBasic
 		parser.allowJSON = true;
 		parser.allowTypes = true;
 
+		setVariable("this", this);
+		setVariable("import", function(className:String)
+		{
+			final splitClassName:Array<String> = [for (e in className.split(".")) e.trim()];
+			final realClassName:String = splitClassName.join(".");
+			final daClass:Class<Dynamic> = Type.resolveClass(realClassName);
+			final daEnum:Enum<Dynamic> = Type.resolveEnum(realClassName);
+
+			if (daClass == null && daEnum == null)
+				Lib.application.window.alert('Class / Enum at $realClassName does not exist.', "Hscript Error!");
+			else
+			{
+				if (daEnum != null)
+				{
+					for (c in daEnum.getConstructors())
+						Reflect.setField({}, c, daEnum.createByName(c));
+					setVariable(splitClassName[splitClassName.length - 1], {});
+				}
+				else
+					setVariable(splitClassName[splitClassName.length - 1], daClass);
+			}
+		});
+
 		setVariable('Function_Stop', Function_Stop);
 		setVariable('Function_Continue', Function_Continue);
 

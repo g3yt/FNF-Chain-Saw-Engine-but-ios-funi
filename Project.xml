@@ -49,7 +49,7 @@
 	<haxelib name="flixel-addons" />
 	<haxelib name="flixel-ui" />
 	<haxelib name="hscript" />
-        <haxelib name="spinehaxe" />
+	<haxelib name="spinehaxe" />
 	<haxelib name="polymod" if="FUTURE_POLYMOD" />
 	<haxelib name="discord_rpc" if="FUTURE_DISCORD_RCP" />
 	<haxelib name="hxcpp-debug-server" if="debug" />
@@ -79,6 +79,8 @@
 
 	<!--Add null-pointer checks, even in release mode-->
 	<haxedef name="HXCPP_CHECK_POINTER" if="cpp" unless="debug" />
+	
+	<haxedef name="no-deprecation-warnings" />
 
 	<!-- ______________________________ Haxe Flags _____________________________ -->
 
@@ -88,13 +90,14 @@
 	<!--Hscript Power go brrr-->
 	<haxeflag name="--macro" value="include('flixel')" />
 	<haxeflag name="--macro" value="include('sys')" unless="web" />
+	<haxeflag name="--macro" value="include('haxe.crypto')" />
+	<haxeflag name="--macro" value="include('spinehaxe')" />
+	<haxeflag name="--macro" value="include('android')" if="android" />
 	<haxeflag name="--macro" value="include('DateTools')" />
+	<haxeflag name="--macro" value="include('Reflect')" />
 	<haxeflag name="--macro" value="include('EReg')" />
 	<haxeflag name="--macro" value="include('Lambda')" />
 	<haxeflag name="--macro" value="include('StringBuf')" />
-	<haxeflag name="--macro" value="include('haxe.crypto')" />
-        <haxeflag name="--macro" value="include('Reflect')" />
-        <haxeflag name="--macro" value="include('spinehaxe')" />
 
 	<!-- _________________________________ Android Permissions _______________________________ -->
 
